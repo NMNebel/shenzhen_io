@@ -1,0 +1,76 @@
+[name] Sz028.0  (Nico Nebel)
+[puzzle] Sz028
+[production-cost] 900
+[power-usage] 884
+[lines-of-code] 18
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+......................
+.....1C...............
+......34.154..94......
+..........94.16.......
+.....1C..16...........
+......34..............
+......................
+......................
+
+[chip] 
+[type] UC4
+[x] 7
+[y] 2
+[code] 
+  teq acc 0
++ teq p0 100
++ mov 2 p1
+- mov 0 p1
+  
+  mov p0 acc
+  slp 1
+
+[chip] 
+[type] LCDN
+[x] 15
+[y] 2
+[is-puzzle-provided] true
+
+[chip] 
+[type] UC4
+[x] 11
+[y] 4
+[code] 
+  add x0
+  sub p0
+  tlt acc 0
++ mov 0 acc
+  mov acc x1
+  
+  slp 1
+
+[chip] 
+[type] UC4
+[x] 7
+[y] 5
+[code] 
+  teq acc 0
++ teq p0 100
++ mov 1 x1
+- mov 0 x1
+  
+  mov p0 acc
+  slp 1
+
+[chip] 
+[type] NOTE
+[x] 11
+[y] 7
+[code] 
+Sz028.0
+Nico Nebel
+20260329
+

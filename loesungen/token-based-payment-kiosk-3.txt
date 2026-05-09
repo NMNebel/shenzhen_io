@@ -1,0 +1,118 @@
+[name] Sz009 (Nico Nebel)
+[puzzle] Sz009
+[production-cost] 1400
+[power-usage] 501
+[lines-of-code] 25
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+..........954.15554...
+...14.....A...........
+...14154..A..95555C...
+...14.94.1694A15C.2...
+.....16..156.A..354...
+...........156........
+......................
+......................
+
+[chip] 
+[type] UC6
+[x] 12
+[y] 2
+[code] 
+  slx x0
+  mov x0 acc
+  
+ausgabe:
+  tgt acc 4 #out-5
++ sub 5
++ gen p0 1 1
++ jmp ausgabe
+  tgt acc 0 #out-1
++ sub 1
++ gen p1 1 1
++ jmp ausgabe
+
+[chip] 
+[type] NOTE
+[x] 15
+[y] 2
+[code] 
+Ausgabe out-5,-1
+
+[chip] 
+[type] DIAL3
+[x] 4
+[y] 3
+[is-puzzle-provided] true
+
+[chip] 
+[type] UC6
+[x] 7
+[y] 3
+[code] 
+  teq x0 1
++ add 1
+  teq x0 10
++ add 5
+  teq x0 100
++ add 12
+# acc >= price?
+  tlt acc x1
+- sub x1 # - price
+- mov acc x2
+- mov 1 x3 # Rtb
+- mov 0 acc
+  slp 1
+
+[chip] 
+[type] DX3
+[x] 4
+[y] 4
+[rotated] true
+
+[chip] 
+[type] NOTE
+[x] 7
+[y] 6
+[code] 
+Summe in-1,-5,-12
+berechnen (->acc)
+
+001: 1er token
+010: 5er token
+100: 12er token
+
+sum - price -> x2
+
+[chip] 
+[type] UC4
+[x] 12
+[y] 6
+[code] 
+  slx x0
+# kann weg ;-)
+  mov x0 null
+  gen p1 4 1
+
+[chip] 
+[type] NOTE
+[x] 15
+[y] 6
+[code] 
+"Ring the bell"
+
+[chip] 
+[type] NOTE
+[x] 3
+[y] 7
+[code] 
+Sz009
+Nico Nebel
+20260506
+

@@ -1,0 +1,78 @@
+[name] Sz005.1 (Nico Nebel)
+[puzzle] Sz005
+[production-cost] 800
+[power-usage] 543
+[lines-of-code] 13
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+......154.154.........
+......154.............
+....15554.1C..........
+..........96...954....
+..........34.156......
+......................
+......................
+......................
+
+[chip] 
+[type] UC4
+[x] 11
+[y] 2
+[code] 
+  slx x0
+  mov x0 p1
+
+[chip] 
+[type] UC6
+[x] 8
+[y] 5
+[code] 
+  teq x0 p1
++ mov 100 acc
+  teq x1 p1
++ mov 0 acc
+  
+  tlt p0 20
++ mov 0 dat
+- mov 100 dat
+  
+  teq acc dat
++ mov acc x2
+- mov 0 x2
+  
+  slp 1
+
+[chip] 
+[type] DIAL2
+[x] 5
+[y] 6
+[is-puzzle-provided] true
+
+[chip] 
+[type] RTC
+[x] 12
+[y] 6
+[rotated] true
+[is-puzzle-provided] true
+
+[chip] 
+[type] NOTE
+[x] 15
+[y] 6
+[code] 
+Sz005.1
+Nico Nebel
+20260331
+
+[chip] 
+[type] DIAL1
+[x] 5
+[y] 7
+[is-puzzle-provided] true
+

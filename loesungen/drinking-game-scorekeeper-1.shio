@@ -1,0 +1,27 @@
+# Sz028.1 (Nico Nebel)
+# Sz028
+
+# chip: UC4
+# input
+#   point -> p0
+#   foul -> p1
+# output
+#   x1 -> LCD screen
+
+# p0 == 0 ?
+  tgt p0 0
++ add 1
+
+# p1 == 1 ?
+  tgt p1 0
++ sub 2
+
+# acc < 0 ?
+  tlt acc 0
++ mov 0 acc
+
+# acc -> x1
+  mov acc x1
+
+  slp 1
+

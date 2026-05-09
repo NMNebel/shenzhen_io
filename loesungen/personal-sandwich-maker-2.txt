@@ -1,0 +1,90 @@
+[name] Sz007EZ (Nico Nebel) (Copy) (Copy)
+[puzzle] Sz007EZ
+[production-cost] 900
+[power-usage] 105
+[lines-of-code] 19
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+.........95555555554..
+....954.169555C..154..
+..156...156154B54154..
+........1555C.A..154..
+...........834A15554..
+...........354354.....
+......................
+......................
+
+[chip] 
+[type] NOTE
+[x] 6
+[y] 2
+[code] 
+bread         (br)
+ meat:    100 (me)
+ cheese:  010 (ch)
+ mustard: 001 (mu)
+bread         (br)
+
+[chip] 
+[type] UC4
+[x] 13
+[y] 2
+[code] 
+  slx x0
+  mov x0 null
+  
+  mov 0 x1 #fertig
+  gen p0 1 0 #br
+  
+  gen p1 3 1 #flag
+
+[chip] 
+[type] BRIDGE
+[x] 11
+[y] 3
+
+[chip] 
+[type] UC6
+[x] 6
+[y] 4
+[code] 
+  slx x0
+  mov x0 acc
+  gen p1 1 0 #br
+  mov 100 x3 #me
+  slp 1
+  teq acc 2
+- mov 010 x3 #ch
+- slp 1
+  teq acc 3
++ mov 001 x3 #mu
++ slp 1
+  mov 001 x3 #mu
+  slp 1
+  mov 1 x2
+
+[chip] 
+[type] DX3
+[x] 16
+[y] 4
+
+[chip] 
+[type] BRIDGE
+[x] 13
+[y] 5
+
+[chip] 
+[type] NOTE
+[x] 4
+[y] 7
+[code] 
+Sz007EZ
+Nico Nebel
+20260509
+

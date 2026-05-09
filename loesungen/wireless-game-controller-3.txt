@@ -1,0 +1,92 @@
+[name] Sz011.3 (Nico Nebel)
+[puzzle] Sz011
+[production-cost] 800
+[power-usage] 814
+[lines-of-code] 19
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+....955555554.........
+....34.155C154........
+.......15CA.14........
+....94.142A8..........
+....3C95556A954.1C....
+.....AA.8156A94..A....
+.....22.3555635416....
+......................
+......................
+
+[chip] 
+[type] BRIDGE
+[x] 8
+[y] 3
+
+[chip] 
+[type] BRIDGE
+[x] 9
+[y] 3
+
+[chip] 
+[type] UC4
+[x] 14
+[y] 3
+[code] 
+  mov 0 acc
+  teq p0 100 # b
++ dst 2 1
+  teq p1 100 # a
++ dst 1 1
+  mov acc x0 # ab
+  
+  slp 1
+
+[chip] 
+[type] UC6
+[x] 5
+[y] 5
+[code] 
+  mov x2 acc # ab
+  teq acc 100
++ mov 1 acc
+  teq acc 10
++ mov 2 acc
+  teq acc 110
++ mov 3 acc
+# Datenpaket
+  teq x0 -1 # rx?
++ mov p0 x3 # x
++ mov p1 x3 # y
++ mov acc x3 # ab
+  
+  slp 1
+
+[chip] 
+[type] BRIDGE
+[x] 11
+[y] 5
+
+[chip] 
+[type] BRIDGE
+[x] 12
+[y] 6
+
+[chip] 
+[type] RADIO
+[x] 13
+[y] 6
+[rotated] true
+[is-puzzle-provided] true
+
+[chip] 
+[type] NOTE
+[x] 16
+[y] 6
+[code] 
+Sz011.3
+Nico Nebel
+20260411
+

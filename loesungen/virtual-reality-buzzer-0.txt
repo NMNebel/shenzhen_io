@@ -1,0 +1,65 @@
+[name] Sz035.0 (Nico Nebel)
+[puzzle] Sz035
+[production-cost] 800
+[power-usage] 423
+[lines-of-code] 13
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+........154...........
+.........94...........
+.........A.....8......
+.........A.94.16......
+.........356..........
+......................
+......................
+......................
+
+[chip] 
+[type] NOTE
+[x] 6
+[y] 3
+[code] 
+Sx035
+Nico Nebel
+20260331
+
+[chip] 
+[type] UC4
+[x] 12
+[y] 3
+[code] 
+# control buzzer
+  slx x0
+  teq x0 1 
++ not
++ mov acc p1
+- mov 0 p1
+- mov 0 acc
+
+[chip] 
+[type] UC6
+[x] 10
+[y] 5
+[code] 
+# rx: 1 op 0?
+  mov x0 acc
+  teq acc 1
++ mov 1 dat
+  teq acc 0
++ mov 0 dat
+  
+  mov dat x1
+  slp 1
+
+[chip] 
+[type] RADIO
+[x] 6
+[y] 6
+[is-puzzle-provided] true
+

@@ -1,0 +1,101 @@
+[name] Sz010 (Nico Nebel)
+[puzzle] Sz010
+[production-cost] 1400
+[power-usage] 525
+[lines-of-code] 19
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+.......9554.1C........
+...94..A.....354......
+...34..A954.1554......
+...94.16A....954......
+...A..15694.16........
+...3555556............
+......................
+......................
+
+[chip] 
+[type] UC4
+[x] 10
+[y] 2
+[code] 
+# blue
+  slx x0
+  mov x0 p1
+
+[chip] 
+[type] NOTE
+[x] 15
+[y] 2
+[code] 
+Sz010
+Nico Nebel
+20260423
+
+[chip] 
+[type] UC6
+[x] 4
+[y] 3
+[code] 
+  mov x0 dat
+  teq dat -999
++ jmp e
+  mov dat x3 #r
+  mov x0 x2  #g
+  mov x0 x1  #b
+  mov x0 acc #d
+e: sub 1
+  teq acc -1
++ mov 0 x3
++ mov 0 x2
++ mov 0 x1
+  
+  slp 1
+
+[chip] 
+[type] UC4
+[x] 10
+[y] 4
+[code] 
+# green
+  slx x0
+  mov x0 p1
+
+[chip] 
+[type] LEDRGBV
+[x] 15
+[y] 4
+[is-puzzle-provided] true
+
+[chip] 
+[type] RADIO
+[x] 4
+[y] 6
+[rotated] true
+[is-puzzle-provided] true
+
+[chip] 
+[type] UC4
+[x] 10
+[y] 6
+[code] 
+# red
+  slx x0
+  mov x0 p1
+
+[chip] 
+[type] NOTE
+[x] 15
+[y] 7
+[code] 
+RGB LED
+- red
+- green
+- blue
+
