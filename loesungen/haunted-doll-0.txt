@@ -1,0 +1,87 @@
+[name] Sz008 (Nico nebel)
+[puzzle] Sz008
+[production-cost] 900
+[power-usage] 356
+[lines-of-code] 11
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+.......954............
+.......A...155C.......
+.......A......2.8.....
+.......3554.15556.....
+..............8.......
+........154.156.......
+......................
+......................
+
+[chip] 
+[type] RND
+[x] 7
+[y] 2
+[is-puzzle-provided] true
+
+[chip] 
+[type] UC6
+[x] 10
+[y] 2
+[code] 
+  tlt p0 3 #random
++ mov 13 acc
++ mov p0 dat
+  mov 50 p1
+  
+  tlt acc 1
++ jmp s:
+  
+  sub 1
+  teq dat 1
++ mov x0 p1 #SG
+- mov x2 p1 #BCC
+  
+s:slp 1
+
+[chip] 
+[type] BRIDGE
+[x] 14
+[y] 3
+
+[chip] 
+[type] BANK
+[x] 9
+[y] 5
+[rom] 
+16,36,42,14,10,58,100,76,26,28,70,80,42,0
+
+[chip] 
+[type] NOTE
+[x] 5
+[y] 7
+[code] 
+Sz008
+Nico Nebel
+20260514
+
+[chip] 
+[type] BANK
+[x] 9
+[y] 7
+[rom] 
+100,80,41,14,14,41,69,74,54,27,19,40,75,0
+
+[chip] 
+[type] NOTE
+[x] 12
+[y] 7
+[code] 
+Oben:
+Sinister Giggle
+
+Unten:
+Blood-Curdling Cry
+
