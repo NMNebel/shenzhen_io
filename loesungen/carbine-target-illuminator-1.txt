@@ -1,0 +1,86 @@
+[name] Sz014.1 (Nico nebel)
+[puzzle] Sz014
+[production-cost] 1200
+[power-usage] 322
+[lines-of-code] 24
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+....95555C............
+....2...16..94.154....
+....154.1C..A.........
+........96..A..154....
+........34..A94.......
+...........16A.154....
+...........156........
+......................
+......................
+
+[chip] 
+[type] NOTE
+[x] 4
+[y] 2
+[code] 
+Sz014
+Nico Nebel
+20260516
+
+[chip] 
+[type] UC6
+[x] 9
+[y] 2
+[code] 
+s:slx x0
+  mov x0 acc
+  sub 1
+  tgt acc 4 #5-6
++ mov 100 x3
++ mov 0 x2
++ jmp s
+  tgt acc 2 #3-4
++ mov 50 x3
++ mov 100 x2
++ jmp s
+  mov 0 x3 #1-2
+  mov 001 x2
+
+[chip] 
+[type] DX3
+[x] 14
+[y] 3
+
+[chip] 
+[type] NOTE
+[x] 10
+[y] 5
+[code] 
+flood-20: 100
+flood-60: 001
+
+[chip] 
+[type] UC4
+[x] 6
+[y] 6
+[code] 
+  teq p1 100 #out
++ mov 1 acc
+  tgt acc 0
++ teq p0 100 #in
++ mov acc x1
++ mov 0 acc
+  tgt acc 0
++ add 1
+  slp 1
+
+[chip] 
+[type] UC4
+[x] 13
+[y] 6
+[code] 
+  slx x0
+  mov x0 p1
+
